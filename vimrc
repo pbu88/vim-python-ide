@@ -1,0 +1,41 @@
+" For this to work you should create a ~/.vimrc file containing:
+" " Load the first file named 'vimrc' found in runtimepath
+" runtime vimrc
+
+set ts=4
+set expandtab
+set shiftwidth=4
+set guifont=Lucida_Console:h11 
+set enc=utf-8
+set nu
+set tw=78
+set si
+set backspace=2
+set hid
+set tags=.\tags;\
+set foldmethod=syntax
+
+map <C-Tab> :bn<Enter>
+map <leader>n :NERDTreeToggle<CR>
+nmap <leader>a <Esc>:Ack!
+
+colorscheme pychimp
+:syntax enable
+:filetype indent on
+
+" Pathogen load
+filetype off
+
+call pathogen#infect()
+call pathogen#helptags()
+
+filetype plugin indent on
+syntax on
+
+" If you prefer the Omni-Completion tip window to close when a selection is
+" " made, these lines close it on movement in insert mode or when leaving
+" " insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+let g:auto_save=1 " enable AutoSave on Vim startup
