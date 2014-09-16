@@ -10,6 +10,3 @@ The `.vimrc` file should look like this:
 
     " Load the first file named 'vimrc' found in runtimepath
     runtime vimrc
-
-
-Paulo Bu
