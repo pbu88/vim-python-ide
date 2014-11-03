@@ -38,7 +38,6 @@ syntax on
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-let g:auto_save=1 " enable AutoSave on Vim startup
 " Otherwise in MacOSX git commit can fail:
 " https://github.com/bling/vim-airline/issues/79
 let g:airline_theme='dark'
