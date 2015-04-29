@@ -5,23 +5,25 @@
 set ts=4
 set expandtab
 set shiftwidth=4
-set guifont=Lucida_Console:h11 
+set guifont=Monaco:h13 
 set enc=utf-8
 set nu
-set tw=78
 set si
 set backspace=2
 set hid
 set tags=.\tags;\
 set foldmethod=syntax
+set nowrap
+set autoread
 
 map <C-Tab> :bn<Enter>
 map <leader>n :NERDTreeToggle<CR>
 nmap <leader>a <Esc>:Ack!
 
-colorscheme pychimp
 :syntax enable
 :filetype indent on
+
+colorscheme pychimp
 
 " Pathogen load
 filetype off
